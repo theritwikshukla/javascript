@@ -1,0 +1,30 @@
+const friend={
+    friendname:function(city,occupation){
+        console.log(this.firstname,this.lastname,"living in",city,"is a",occupation);
+    }
+};
+const friend1={
+    firstname:"Ritwik",
+    lastname:"Shukla"
+};
+const friend2={
+    firstname:"Ankur",
+    lastname:"Shukla"
+};
+friend.friendname.call(friend2,"andheri","Engineer")
+
+var onepeice={
+    opname:function(dish,hobby){
+        console.log(this.firstname,this.lastname,"loves",dish,"and wants to",hobby);
+    }
+};
+var char1={
+    firstname:"Monkey D",
+    lastname:"Luffy"
+};
+var char2={
+    firstname:"Roronoa",
+    lastname:"Zoro"
+};
+onepeice.opname.call(char1,"meat","fight");
+onepeice.opname.call(char2,"wine","swordmenship");
